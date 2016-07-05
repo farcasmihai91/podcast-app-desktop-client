@@ -4,18 +4,42 @@
 <head>
   <title>Podcast App</title>
   <meta charset="UTF-8">
+  <script src="../node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="../node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="../node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="../node_modules/systemjs/dist/system.src.js"></script>
+  <script src="../node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="../node_modules/angular2/bundles/http.dev.js"></script>
+  <script src="../node_modules/angular2/bundles/router.dev.js"></script>
+  <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="../build/common.js"></script>
+  <script src="../build/angular2.js"></script>
+  <script src="../build/app.js"></script>
+  <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/custom.css">
+
+  <script>
+    System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import('build/app')
+    .then(null, console.error.bind(console));
+  </script>
 </head>
 
 <body>
   <div class="container">
-    <h1>Hello Electron</h1>
+    <my-app>Loading...</my-app>
   </div>
 
-  <script src="../node_modules/angular2/bundles/angular2-polyfills.js"></script>
-  <script src="../build/common.js"></script>
-  <script src="../build/angular2.js"></script>
-  <script src="../build/app.js"></script>
+
 </body>
 
 </html>

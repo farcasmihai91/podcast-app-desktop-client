@@ -1,0 +1,16 @@
+<div class="container podSection">
+
+  <div *ngIf="!podLink">
+    <div *ngFor="let pod of podcasts" class="four columns">
+      <img src="{{pod.link}}" alt="podcast cover" (click)="podSelect(pod.link)">
+    </div>
+  </div>
+
+  <div *ngIf="podLink" class="twelve columns">
+    <div (click)="goBack()">
+      <h3>Go Back</h3>
+    </div>
+    <img [src]="podLink" frameborder="0" class="u-full-width">
+  </div>
+
+</div>

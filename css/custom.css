@@ -1,0 +1,13 @@
+.header-bar {
+  background-color: black;
+  color: white;
+}
+
+.spacer {
+  height: 40px;
+}
+
+img {
+  max-width: 200px; 
+  height: auto;
+}
