@@ -1,7 +1,15 @@
 <section class="u-full-width">
   <div class="row">
     <div class="twelve columns header-bar">
-      <h1>Angular 2 App</h1>
+      <div class="three columns">
+        <h1>Angular 2 App</h1>
+      </div>
+      <div class="one column">
+        <a [routerLink]="['Login']" class="button button-primary">Login</a>
+      </div>
+      <div class="one column">
+        <a [routerLink]="['Home']" class="button button-primary">Home</a>
+      </div>
     </div>
   </div>
   <div class="spacer">
@@ -10,3 +18,4 @@
 </section>
 
 <my-podcast></my-podcast>
+<router-outlet></router-outlet>

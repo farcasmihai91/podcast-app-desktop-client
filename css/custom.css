@@ -11,3 +11,15 @@ img {
   max-width: 200px; 
   height: auto;
 }
+
+.warning {
+  color: red;
+}
+
+.ng-valid[required] {
+  border: 2px solid green;
+}
+
+.ng-invalid[required] {
+  border: 2px solid red;
+}
